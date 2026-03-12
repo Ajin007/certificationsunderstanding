@@ -190,6 +190,10 @@ Sorting
 SELECT *
 FROM orders
 ORDER BY details;
+
+SELECT *
+FROM orders
+ORDER BY JSON_VALUE(details, '$.id');
 ```
 
 ### Usage
