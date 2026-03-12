@@ -69,6 +69,10 @@ SODA (Simple Oracle Document Access) allows JSON documents to be managed like No
 ### Create Collection
 
 ```sql
+***************************
+## check for the soda 
+SELECT * FROM all_objects WHERE object_name = 'DBMS_SODA';
+******************************
 BEGIN
   DBMS_SODA.create_collection(
      collection_name => 'customers'
