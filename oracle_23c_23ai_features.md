@@ -234,6 +234,16 @@ Query Using Predicate
 SELECT *
 FROM employees
 WHERE JSON_VALUE(data, '$?(@.salary > 6000).name') IS NOT NULL;
+
+-- Insert sample data with nested JSON array
+INSERT INTO employees VALUES(
+   JSON('{"id":1,"name":"Ravi","salary":7000,"projects":[{"name":"Project A","status":"completed"},{"name":"Project B","status":"in-progress"}]}')
+);
+
+-- Query the projects where status is 'completed' using JSON_QUERY
+SELECT *
+FROM employees
+WHERE JSON_QUERY(data, '$?(@.projects[?(@.status == "completed")])') IS NOT NULL;
 ```
 
 ### Usage
