@@ -241,9 +241,8 @@ INSERT INTO employees VALUES(
 );
 
 -- Query the projects where status is 'completed' using JSON_QUERY
-SELECT *
-FROM employees
-WHERE JSON_QUERY(data, '$?(@.projects[?(@.status == "completed")])') IS NOT NULL;
+select  * from EMPLOYEES
+where JSON_QUERY(info,'$.projects[*]?(@.status=="completed")') IS not null
 ```
 
 ### Usage
