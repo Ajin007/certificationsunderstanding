@@ -332,6 +332,26 @@ select genre,count(*) as movie_count from netflix_movies group by 1
 -- no need to use the dual class
 1. select sysdate from dual;
 select sysdate
+-- With DUAL
+SELECT USER FROM dual;
+
+-- Without DUAL (works directly)
+SELECT USER;
+-- With DUAL
+SELECT CURRENT_TIMESTAMP FROM dual;
+
+-- Without DUAL (works directly)
+SELECT CURRENT_TIMESTAMP;
+-- With DUAL
+SELECT 5 + 3 FROM dual;
+
+-- Without DUAL (works directly)
+SELECT 5 + 3;
+-- With DUAL
+SELECT 'Hello, World!' FROM dual;
+
+-- Without DUAL (works directly)
+SELECT 'Hello, World!';
 ~~~
 
 ## sql update return clause enhancement with bind varaible 
