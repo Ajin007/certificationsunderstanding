@@ -21,6 +21,12 @@ CREATE TABLE employees_json (
 Register Schema
 
 ```sql
+**********Schema available in the database or not to check the same use it ******************
+SELECT object_name, object_type
+FROM all_objects
+WHERE object_name = 'DBMS_JSON_SCHEMA';
+******************************************************************************************************
+
 DECLARE
 schema_doc JSON := '{
   "type": "object",
