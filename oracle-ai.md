@@ -352,6 +352,16 @@ SELECT 'Hello, World!' FROM dual;
 
 -- Without DUAL (works directly)
 SELECT 'Hello, World!';
+************************************************************************************
+CREATE SEQUENCE my_sequence
+START WITH 1  -- Start at 1
+INCREMENT BY 1;  -- Increment by 1 each time
+*************************
+-- With DUAL
+SELECT my_sequence.NEXTVAL FROM dual;
+
+-- Without DUAL (works directly)
+SELECT my_sequence.NEXTVAL;
 ~~~
 
 ## sql update return clause enhancement with bind varaible 
