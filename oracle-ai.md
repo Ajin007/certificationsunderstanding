@@ -277,14 +277,18 @@ AI datacatalog , metadata, Used by the AI Tools, easily searchable
 
 
 [1]. Method level Annotation
-CREATE TABLE employeeAnnotation (
-    emp_id NUMBER,
-    emp_dept VARCHAR2(50)
+create table employeeAnnotation(
+    emp_id NUMBER
+    ANNOTATIONS(
+        identity 'primary'
+    )
+    ,  
+    emp_dept VARCHAR2(57)
+    ANNOTATIONS(
+        pririty 'high',
+        sensitivity 'medium'
+    )
 )
-ANNOTATIONS (
-    owner 'HR Department',
-    classification 'internal'
-);
 
 [2]. Table level annotations:
 -- CREATE TABLE employeeAnnotationTable (
