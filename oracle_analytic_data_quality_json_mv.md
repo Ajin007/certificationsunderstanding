@@ -27,7 +27,26 @@ OVER (
   102      Neha    IT     60000
   103      Raj     HR     40000
   104      Priya   HR     45000
+### Example -- Employee type
+~~~
+CREATE TABLE employees (
+    EMP_ID NUMBER PRIMARY KEY, 
+    NAME VARCHAR2(100), 
+    DEPT VARCHAR2(50), 
+    SALARY NUMBER
+);
+INSERT INTO employees (EMP_ID, NAME, DEPT, SALARY) 
+VALUES (101, 'Amit', 'IT', 50000);
 
+INSERT INTO employees (EMP_ID, NAME, DEPT, SALARY) 
+VALUES (102, 'Neha', 'IT', 60000);
+
+INSERT INTO employees (EMP_ID, NAME, DEPT, SALARY) 
+VALUES (103, 'Raj', 'HR', 40000);
+
+INSERT INTO employees (EMP_ID, NAME, DEPT, SALARY) 
+VALUES (104, 'Priya', 'HR', 45000);
+~~~
 ### Example -- Ranking Employees by Salary
 
 ``` sql
