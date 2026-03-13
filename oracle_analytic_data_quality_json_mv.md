@@ -128,7 +128,20 @@ FROM customer_data;
   ---- --------------- ------------
   1    abc@gmail.com   9876543210
   2    abcgmail.com    NULL
+### Query 
+~~~
 
+CREATE TABLE CUSTOMERS (
+    ID NUMBER PRIMARY KEY,
+    EMAIL VARCHAR2(100),
+    PHONE VARCHAR2(15)
+);
+INSERT INTO CUSTOMERS (ID, EMAIL, PHONE)
+VALUES (1, 'abc@gmail.com', '9876543210');
+
+INSERT INTO CUSTOMERS (ID, EMAIL, PHONE)
+VALUES (2, 'abcgmail.com', NULL);
+~~~
 ### Example -- Find Missing Data
 
 ``` sql
