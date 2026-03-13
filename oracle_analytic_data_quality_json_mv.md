@@ -297,6 +297,14 @@ SELECT *
 FROM customers
 WHERE phone IS NULL
 OR NOT REGEXP_LIKE(email,'@');
+
+-- cascading
+
+CREATE TABLE orders (
+    order_id NUMBER PRIMARY KEY,
+    customer_id NUMBER,
+    CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
+);
 ```
 
 Used during **data cleaning pipelines before analytics**.
