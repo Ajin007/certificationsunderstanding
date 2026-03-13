@@ -5,6 +5,21 @@
 Analytic functions in Oracle Database perform calculations across a set
 of rows related to the current row while still returning individual
 rows.
+Oracle has strengthened its Analytic Platform in Oracle 23c and 23ai by introducing more powerful features for large-scale data processing, real-time analytics, and enhanced machine learning (ML) capabilities. The platform integrates with big data, AI, and cloud-native analytics tools.
+
+Key Enhancements:
+
+Autonomous Analytics: Oracle Autonomous Database now supports automatic scaling, tuning, and optimization for analytical workloads, which helps in running large-scale analytics without manual intervention.
+
+In-Memory Column Store: Oracle's In-Memory Columnar Store has been enhanced, allowing faster query processing for analytics queries (e.g., aggregations and complex joins). This results in real-time processing and analytics, especially when working with large datasets.
+
+Machine Learning and Data Science:
+
+Oracle Machine Learning (OML) is now more integrated with the database, allowing you to run machine learning models directly inside the database, minimizing data transfer costs and enhancing performance.
+
+Automated Data Preprocessing: New features to automatically handle missing data, outliers, and feature scaling, which makes it easier to work with data for analytics and machine learning.
+
+Seamless Integration with Big Data: Oracle has improved the integration with Hadoop, NoSQL, and cloud storage, enabling cross-platform querying and analytics, especially for big data use cases.
 
 ### Syntax
 
@@ -82,6 +97,19 @@ FROM employees;
 # 2. Data Quality Operators in Oracle
 
 Data quality operators help validate and clean data before analytics.
+Oracle 23c and 23ai include enhancements to the Data Quality Operators for better data validation, standardization, and cleaning. These operators are critical in ensuring that the data used for analytics is accurate, consistent, and usable.
+
+Key Enhancements:
+
+Data Quality Functions: Oracle now includes more advanced functions for data profiling, data standardization, and data validation. These functions allow you to clean and transform raw data before it's used in analytics.
+
+Fuzzy Matching: Enhanced fuzzy matching and duplicate detection operators help identify records that might represent the same entity but are written differently (e.g., different spellings of names, addresses).
+
+Data Transformation: New operators for transforming data into the required format, such as converting text to proper case, handling missing data, and standardizing numerical values.
+
+Using CLEAN_DATA Function
+SELECT CLEAN_DATA(address) AS clean_address
+FROM customer_data;
 
 ### Common Operators
 
@@ -145,6 +173,20 @@ materialized views.
 
 A **Materialized View** stores the result of a query physically to
 improve performance.
+
+Materialized Views are a powerful feature in Oracle that allows you to store the results of complex queries for efficient querying. Oracle 23c and 23ai have introduced JSON Materialized Views, which allow you to store JSON data in materialized views and automatically refresh them as the underlying data changes.
+
+Key Enhancements:
+
+Storing JSON in Materialized Views: You can now create materialized views that store JSON data or JSON fragments extracted from relational data. This is useful when you need to perform analytics on the data without repeatedly parsing JSON documents.
+
+Improved Performance: Enhanced indexing and caching of JSON data in materialized views significantly improves the performance of queries involving JSON documents.
+
+Automatic Refresh: Materialized Views can be set to automatically refresh based on changes in the underlying data, making them ideal for real-time analytics.
+
+This materialized view creates a JSON object for each row in the employees table and stores it in the view.
+
+REFRESH COMPLETE ensures that the materialized view is refreshed whenever the base data changes.
 
 ### Create JSON Table
 
