@@ -37,6 +37,7 @@ XMLTYPE STORE AS BINARY XML;
 ------------------------------------------------------------------------
 
 ## Example
+### Discard this(this one is the basicfile format)
 
 ### Create Table with Binary XML Storage
 
