@@ -30,6 +30,7 @@ OVER (
      ORDER BY column
 )
 ```
+The OVER clause is not a function itself, but it is used in conjunction with analytic functions (also known as window functions) to perform calculations across a set of rows that are somehow related to the current row.
 
 -   **PARTITION BY** → divides rows into groups
 -   **ORDER BY** → defines calculation order
